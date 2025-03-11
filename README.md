@@ -4,8 +4,9 @@
 ## Setup
 
 ### 1. SSH Connection and Setup
-
-> ssh [NETID]@dgx-head01.its.albany.edu
+```bash
+ssh [NETID]@dgx-head01.its.albany.edu
+```
 
 ```bash
 cd
@@ -29,16 +30,20 @@ machine authn.nvidia.com login $oauthtoken password [APIKEY]
 - Use VSCode Remote Access to access your files on dgx-head01
     - [NETID]@dgx-head01.its.albany.edu
 
-- Transfer the scripts to your base directory
+- Copy the scripts to your base directory
     - jupyter.sh
     - run.sh
 
 
 ## Running Jupyter
 
-### 1. Start a job for running Jupyter
+### 1. Start a job to run Jupyter
 
-> sh run.sh
+```bash
+ssh [NETID]@dgx-head01.its.albany.edu
+
+sh run.sh
+```
 
 - It will print which node is running the job (NODEID: dgx##)
 
