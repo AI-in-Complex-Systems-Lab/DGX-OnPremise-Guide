@@ -56,3 +56,12 @@ sh run.sh
 ```md
 http://[NODEID].its.albany.edu:8008/lab
 ```
+
+### Extra. See job status
+
+- If you would like to see the status of your job again:
+
+```bash
+module load slurm
+squeue -u $USER
+```
