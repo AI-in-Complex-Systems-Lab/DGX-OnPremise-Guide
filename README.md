@@ -24,9 +24,10 @@ machine nvcr.io login $oauthtoken password [APIKEY]
 machine authn.nvidia.com login $oauthtoken password [APIKEY]
 ```
 
-### 2. Trasnfer the scripts
+### 2. Transfer the scripts
 
 - Use VSCode Remote Access to access your files on dgx-head01
+    - [NETID]@dgx-head01.its.albany.edu
 
 - Transfer the scripts to your base directory
     - jupyter.sh
