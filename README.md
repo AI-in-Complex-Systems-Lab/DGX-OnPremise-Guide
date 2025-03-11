@@ -1,8 +1,11 @@
 # Instructions to connect DGX on prem cloud resources:
 
-## 1. SSH Connection and Setup
 
-> ssh ho598796@dgx-head01.its.albany.edu
+## Setup
+
+### 1. SSH Connection and Setup
+
+> ssh [NETID]@dgx-head01.its.albany.edu
 
 ```bash
 cd
@@ -17,11 +20,11 @@ nano .credentials
 
 ```md
 # NVIDIA GPU Cloud (both endpoints are required)
-machine nvcr.io login $oauthtoken password APIKEY
-machine authn.nvidia.com login $oauthtoken password APIKEY
+machine nvcr.io login $oauthtoken password [APIKEY]
+machine authn.nvidia.com login $oauthtoken password [APIKEY]
 ```
 
-## 2. Trasnfer the scripts
+### 2. Trasnfer the scripts
 
 - Use VSCode Remote Access to access your files on dgx-head01
 
@@ -30,19 +33,19 @@ machine authn.nvidia.com login $oauthtoken password APIKEY
     - run.sh
 
 
-# Running Jupyter
+## Running Jupyter
 
-## 1. Start a job for running Jupyter
+### 1. Start a job for running Jupyter
 
 > sh run.sh
 
 - It will print which node is running the job (NODEID: dgx##)
 
-## 2. Open a new terminal and leave it open to tunnel the port
+### 2. Open a new terminal and leave it open to tunnel the port
 
-> ssh -N -L 8008:207.211.163.76:8008 NETID@dgx-head01.its.albany.edu
+> ssh -N -L 8008:207.211.163.76:8008 [NETID]@dgx-head01.its.albany.edu
 
-## 3. Go to this address
+### 3. Go to this address to access Jupyter
 
 ```md
 http://[NODEID].its.albany.edu:8008/lab
