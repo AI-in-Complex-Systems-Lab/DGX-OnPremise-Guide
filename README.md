@@ -49,7 +49,7 @@ sh run.sh
 
 ### 2. Open a new terminal and leave it open to tunnel the port
 
-> ssh -N -L 8008:207.211.163.76:8008 [NETID]@dgx-head01.its.albany.edu
+> ssh -N -L 8008::8008 [NETID]@dgx-head01.its.albany.edu
 
 ### 3. Go to this address to access Jupyter
 
@@ -57,11 +57,18 @@ sh run.sh
 http://[NODEID].its.albany.edu:8008/lab
 ```
 
-### Extra. See job status
+### Extra. 
 
-- If you would like to see the status of your job again:
+- If you want to see the status of your job again:
 
 ```bash
 module load slurm
 squeue -u $USER
+```
+
+- If you want to cancel your job:
+
+```bash
+module load slurm
+scancel [JOBID]
 ```
