@@ -8,4 +8,4 @@
 #SBATCH --container-mounts=/network/rit/lab/ComplexSystemsLab:/mnt/ComplexSystemsLab
 #SBATCH --container-image='docker://nvcr.io/nvidia/pytorch:24.05-py3'
 
-jupyter lab --allow-root --port=8008 --no-browser --ip=0.0.0.0 --IdentityProvider.token='' --NotebookApp.allow_origin='*' --notebook-dir=/mnt/ComplexSystemsLab
+jupyter lab --allow-root --port=8008 --no-browser --ip=0.0.0.0 --IdentityProvider.token='' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --notebook-dir=/mnt/ComplexSystemsLab
