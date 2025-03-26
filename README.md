@@ -10,6 +10,7 @@ ssh [NETID]@dgx-head01.its.albany.edu
 
 ```bash
 cd
+mkdir .config
 cd ~/.config
 mkdir enroot
 cd enroot
