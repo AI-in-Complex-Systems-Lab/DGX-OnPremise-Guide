@@ -8,17 +8,22 @@
 ssh [NETID]@dgx-head01.its.albany.edu
 ```
 
+- create '/.config' directory
 ```bash
 cd
 mkdir .config
+```
+
+- From inside your '/enroot/' directory, create a '.credentials' file and format it as such.
+
+```bash
 cd ~/.config
 mkdir enroot
 cd enroot
 nano .credentials
 ```
 
-- From inside your /enroot/ directory, create a .credentials file and format it as such.
-- [How to get API keys?](https://albany.atlassian.net/wiki/spaces/askit/pages/52331279)
+- Put your keys inside '.credentials' [How to get API keys?](https://albany.atlassian.net/wiki/spaces/askit/pages/52331279)
 
 ```md
 # NVIDIA GPU Cloud (both endpoints are required)
